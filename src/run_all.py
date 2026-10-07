@@ -31,7 +31,11 @@ STEPS = [
         [PY, "-m", "starter.projection", "--data-root", "data/kitti_mini", "--frame", "000009"],
         [PY, "-m", "starter.projection", "--data-root", "data/nuscenes_mini_subset", "--frame", "scene-0103_010"],
     ]),
-    ("cp3_sweep_kitti", "Sweep drift yaw/pitch/roll/t trên KITTI", [
+    ("cp3_sample_yaw", "Script mẫu codelab: yaw sweep 3 frame + biểu đồ (đối chiếu bảng kỳ vọng)", [
+        [PY, "-m", "src.exp_yaw_sweep", "--data-root", "data/kitti_mini", "--frames", "000008", "000011", "000049"],
+        [PY, "-m", "src.plot_yaw_sweep"],
+    ]),
+    ("cp3_sweep_kitti","Sweep drift yaw/pitch/roll/t trên KITTI", [
         [PY, "-m", "src.calib_sweep", "--data-root", "data/kitti_mini", "--out", "results/calib_sweep_kitti.csv"],
     ]),
     ("cp3_sweep_nusc", "Sweep drift trên nuScenes (bonus B5)", [
