@@ -47,6 +47,7 @@ STEPS = [
     ]),
     ("cp4_figures", "Biểu đồ, ảnh demo và ảnh fail_*", [
         [PY, "-m", "src.make_figures"],
+        [PY, "-m", "src.fail_time_sync"],
     ]),
     ("cp5_check", "Kiểm tra trước khi nộp", [
         [PY, "tools/check_submission.py"],
