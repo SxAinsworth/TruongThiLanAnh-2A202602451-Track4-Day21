@@ -45,7 +45,14 @@ Use-case cụ thể (ADAS / robot / drone), trade-off và bước tiếp theo.
 Các lệnh tái tạo lại toàn bộ kết quả từ repo sạch.
 
 ```bash
-[ĐIỀN]
+python -m venv .venv && .venv\Scriptsctivate     # Linux/macOS: source .venv/bin/activate
+set PYTHONUTF8=1                                   # Windows: để pip đọc được requirements.txt có tiếng Việt
+pip install -r requirements.txt
+
+# CP2: demo projection
+python -m starter.projection --data-root data/synthetic --frame 000000
+python -m starter.projection --data-root data/kitti_mini --frame 000011
+python -m starter.projection --data-root data/nuscenes_mini_subset --frame scene-0103_010
 ```
 
 ## 6. Khai báo sử dụng AI
