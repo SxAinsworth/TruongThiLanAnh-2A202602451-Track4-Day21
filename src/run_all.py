@@ -49,7 +49,11 @@ STEPS = [
         [PY, "-m", "src.make_figures"],
         [PY, "-m", "src.fail_time_sync"],
     ]),
-    ("cp5_check", "Kiểm tra trước khi nộp", [
+    ("bonus", "[B1] inbox vs edge score, [B3] latency p50/p95", [
+        [PY, "-m", "src.bonus_compare"],
+        [PY, "-m", "src.latency"],
+    ]),
+    ("cp5_check","Kiểm tra trước khi nộp", [
         [PY, "tools/check_submission.py"],
     ]),
 ]
