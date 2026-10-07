@@ -76,6 +76,16 @@ python -m venv .venv
 set PYTHONUTF8=1                          # Windows cmd (PowerShell: $env:PYTHONUTF8=1); để pip đọc được requirements.txt có tiếng Việt
 pip install -r requirements.txt
 
+# Cách nhanh: chạy lần lượt mọi phần CP0 -> CP5 (khoảng 1 phút). Xem danh sách phần: --list
+python -m src.run_all
+# Hoặc chạy riêng từng phần, ví dụ: python -m src.run_all --steps cp3_sweep_kitti cp4_figures
+# Các lệnh tương đương, từng bước:
+
+# CP0: kiểm tra dữ liệu
+python tools/verify_data.py --data-root data/kitti_mini
+python tools/verify_data.py --data-root data/nuscenes_mini_subset
+python -m starter.data_health --data-root data/synthetic
+
 # CP2: demo projection (calib đúng) ở 3 khoảng cách + nuScenes
 python -m starter.projection --data-root data/synthetic --frame 000000
 python -m starter.projection --data-root data/kitti_mini --frame 000025
