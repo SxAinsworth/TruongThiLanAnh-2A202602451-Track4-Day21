@@ -86,6 +86,8 @@ python tools/verify_data.py --data-root data/kitti_mini
 python tools/verify_data.py --data-root data/nuscenes_mini_subset
 python -m starter.data_health --data-root data/synthetic
 
+# CP2: self-test 2 hàm TODO (điểm (10,0,0) -> z_cam 9.73, pixel (614,175); loại NaN / sau camera / ngoài ảnh)
+python -m src.test_projection
 # CP2: demo projection (calib đúng) ở 3 khoảng cách + nuScenes
 python -m starter.projection --data-root data/synthetic --frame 000000
 python -m starter.projection --data-root data/kitti_mini --frame 000025

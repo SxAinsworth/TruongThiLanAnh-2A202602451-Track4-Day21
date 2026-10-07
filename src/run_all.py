@@ -23,7 +23,8 @@ STEPS = [
         [PY, "-m", "starter.data_health", "--data-root", "data/kitti_mini", "--out", "results/data_health_kitti.csv"],
         [PY, "-m", "starter.data_health", "--data-root", "data/nuscenes_mini_subset", "--out", "results/data_health_nusc.csv"],
     ]),
-    ("cp2_projection", "Overlay calib đúng: synthetic, KITTI gần/vừa/xa, nuScenes", [
+    ("cp2_projection", "Self-test 2 hàm TODO + overlay calib đúng: synthetic, KITTI gần/vừa/xa, nuScenes", [
+        [PY, "-m", "src.test_projection"],
         [PY, "-m", "starter.projection", "--data-root", "data/synthetic", "--frame", "000000"],
         [PY, "-m", "starter.projection", "--data-root", "data/kitti_mini", "--frame", "000025"],
         [PY, "-m", "starter.projection", "--data-root", "data/kitti_mini", "--frame", "000011"],
