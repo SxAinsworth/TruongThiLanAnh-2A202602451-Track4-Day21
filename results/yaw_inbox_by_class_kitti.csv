@@ -1,0 +1,7 @@
+group,bin,0.0,0.5,1.0,2.0,3.0,n_obj
+Car/Van/Truck,far,100.0,92.1,78.0,49.3,30.0,27
+Car/Van/Truck,mid,100.0,98.5,93.8,83.1,70.7,30
+Car/Van/Truck,near,99.8,98.7,96.9,91.7,86.2,25
+Pedestrian/Cyclist,far,97.6,64.3,16.4,0.0,0.0,7
+Pedestrian/Cyclist,mid,93.8,68.4,29.2,0.4,0.0,10
+Pedestrian/Cyclist,near,96.5,90.7,79.9,52.3,36.3,7
